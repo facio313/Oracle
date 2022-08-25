@@ -17,7 +17,7 @@ AND     A.CART_PROD = B.PROD_ID -- 카타 어쩌고 뭐뭐라는데 조인에 사용됨
 GROUP BY    A.CART_PROD
 ORDER BY    1;
     
-사용예)
+사용예)..
 장바구니테이블에서 2020년 5월 회원별 판매집계를 조회하시오.
     Alias는 회원번호, 구매수량, 구매금액
     

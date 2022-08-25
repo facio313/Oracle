@@ -57,7 +57,7 @@ FROM    PROD
 GROUP BY    PROD_LGU
 ORDER BY    PROD_LGU; -- 보통 GROUP BY와 같은 걸로 함
 
-사용예) 
+사용예) ..
 
 SELECT  PROD_LGU                    AS "상품 분류 코드",
         PROD_BUYER                  AS 거래처,
