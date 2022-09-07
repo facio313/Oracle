@@ -42,8 +42,24 @@ DECLARE
     FROM    HR.EMPLOYEES
     WHERE   DEPARTMENT_ID = P_DID;
 BEGIN
-    
 END;
 
+(2) 커서 OPEN
+- 커서를 사용하기 위해 커서를 OPEN해야 하며 OPEN된 컷는 반드시 CLOSE되어야 재OPEN될 수 있음
+(사용형식)
+OPEN    커서명[(매개변수list)];
+- 매개변서list : 커서 선언문에 사용된 매개변수에 전달될 실제 값을 기술
 
+(3) 커서 FETCH
+- 커서에 존재하는 데이터를 행단위로 읽어오는 명령
+- 보통 반복명령 내부에 존재
+(사용형식)
+FETCH   커서명 INTO    변수list
+- 변수list : 커서의 컬럼의 값을 전달받을 변수명 기술
 
+(4) 커서 CLOSE
+- 사용이 완료된 커서를 닫음
+(사용형식)
+CLOSE 커서명;
+- OPEN된 커서는 반드시 CLOSE해야 함
+- CLOSE되지 않은 커서는 다시 OPEN될 수 없음
