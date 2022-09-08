@@ -103,14 +103,15 @@ BEGIN
 END;
 
 사용예) --숙제
-직업이 '자영업'인 회원번호를 입력받아 2020년 상반기(1~6월) 구매현황을 출력하는 프로시저를 작성하시오
+직업이 '자영업'인 회원의 회원번호를 입력받아 2020년 상반기(1~6월) 구매현황을 출력하는 프로시저를 작성하시오
     Alias는 회원번호, 회원명, 구매금액 합계
+    MEMBER/CART
 CREATE OR REPLACE PROCEDURE PROC_MID(
-    P_MID   IN   MEMBER.MEM_ID%TYPE)
+    P_JOB   IN  VARCHAR2,
+    P_MID   OUT MEMBER.MEM_ID%TYPE),
+    P_SUM   NUMBER
 IS
-    V_MID  VARCHAR2(15);
-    V_MNAME VARCHAR2(20);
-    V_SUM NUMBER := 0;
+    V_JOB   MEMBER.MEM_JOB%TYPE;
 BEGIN
 --    SELECT  B.EMP_NAME, B.JOB_ID, A.DEPARTMENT_NAME, B.SALARY
 --    INTO    V_NAME, V_JOBID, V_DNAME, V_SAL
